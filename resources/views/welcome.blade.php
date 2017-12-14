@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">VISHAL 5</div>
+                <div class="title">LARAVEL 5</div>
             </div>
         </div>
     </body>
