@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/hello', 'DashboardController@index');
-
+Route::get('/hello', 'DashboardController@index');
+Route::post('/register', 'DashboardController@store');
