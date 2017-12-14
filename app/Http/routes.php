@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', 'DashboardController@index');
-
+Route::post('/register', 'DashboardController@store');
