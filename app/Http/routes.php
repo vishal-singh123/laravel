@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 // Route::group(['prefix'=>'api/v1', function() {
 // 	Route::get('todos/active', 'TodoController@getAllActiveTodos');
 // 	Route::get('todos/completed', 'TodoController@getAllCompletedTodos');
