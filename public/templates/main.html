@@ -1,0 +1,157 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div style="height: 384px">
+                    <div uib-carousel active="active" interval="2000" no-wrap="false">
+                        <div uib-slide ng-repeat="movie in movies track by movie.id" index="movie.id"> 
+                            <div style="background:url({{movie.image_url}}) center center; background-size:cover; height:384px" class="slider-size">
+                            </div>
+                            <div class="carousel-caption">
+                                <h1>{{movie.name}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="scroll-movies">
+    <div class="out-now">
+        <h6>OUT NOW</h6>
+    </div>
+    <div class="scroll-parent">
+        <ul class="list">
+            <li ng-repeat="movie in movielist track by movie.id" index="movie.id">
+                <button class="btn edit-button" ng-click="editMovieModal()">Edit</button>
+                                    <a ui-sref="details({id: movie.id})">
+                    <div class="overlay">
+                        <ul style="padding-left: 0px">
+                            <li>
+                                
+                                <p><span class="mouseover" uib-rating ng-model="movie.rating" max="5" read-only="true"></span></p>
+                                <h4 style="margin: 0px">Baby Driver</h4>
+                                <p>{{movie.genre}}</p>
+                            </li>
+                        </ul>    
+                    </div>
+
+                    <img src="{{movie.thumbnail}}">
+                </a>    
+            </li>
+        </ul> 
+    </div>
+</div>    
+<div class="scroll-trailers">
+    <div class="trailers" style="float: left">
+        <h6>TRAILERS</h6>
+    </div>
+    <div class="scroll-infotrailers">
+        <ul>
+            <li ng-repeat="movie in movies track by movie.id" index="movie.id" style="background: grey">
+                <div class="container-fluid">
+                    <div class="row" style="position: relative">
+                        <div class="col-md-6" style="height: 290px">
+                            <div class="row">
+                                <div class="row movie-details">
+                                    <div class="col-md-4" style="height: 145px" style="padding-right: 0px">
+                                        <img class="movie-logo" src="{{movie.thumbnail}}">
+                                    </div>
+                                    <div class="col-md-8" style="height: 145px">
+                                       <ul style="list-style-type: none">
+                                           <li>
+                                              <h3><b>{{movie.name}}</b></h3> 
+                                           </li>
+                                           <li>
+                                               <label>Year</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span>{{movie.release_year}}</span>
+                                           </li>
+                                           <li>
+                                               <label>Country</label> &nbsp; &nbsp; &nbsp;<span>{{movie.country}}</span> 
+                                           </li>
+                                           <li>
+                                               <label>Genre</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span>{{movie.genre}}</span>
+                                           </li>
+                                           <li>
+                                               <label>Country</label> &nbsp; &nbsp; &nbsp;<span>{{movie.country}}</span> 
+                                           </li>
+                                       </ul>
+                                    </div>
+                                </div>
+                                <div class="row description" style="height: 50px; width: 100%">
+                                    {{movie.description}}
+                                </div>
+                                <div class="row">    
+                                    <div class="screenshots" style="height: 95px">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 trailer-link" style="height: 290px">
+                            <div class="trailer-overlay">
+                                <div class="btn trailer-button" ng-click="trailerModal()">
+                                    <i class="fa fa-play fa-2x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <img class="img img-responsive" src="{{movie.trailer_link}}" style="width: 437px; height: 94%">
+                        </div>
+                    </div>           
+                </div>       
+            </li>
+        </ul>    
+    </div>
+</div>
+<div class="container-fluid dynamic-info">
+    <div class="col-sm-4 news" style="height: 100%">
+        <h4><b>Latest News</b></h4>
+        <div class="wrap-nav">
+            <uib-tabset  heading="Latest news" active="activeJustified" justified="true">
+                <uib-tab index="0" heading="top"><br>top news</uib-tab>
+                <uib-tab index="1" heading="movies"><br>movie news</uib-tab>
+                <uib-tab index="2" heading="TV"><br>tv news</uib-tab>
+                <uib-tab index="3" heading="celebs"><br>celeb news</uib-tab>
+            </uib-tabset>
+        </div>      
+    </div>
+    <div class="col-sm-4 born-today" style="height: 100%">
+        <div class="row">
+            <div>
+                <h4><b>Born Today</b></h4>
+            </div>
+            <div>
+                <ul style="list-style-type: none; height: 120px">
+                    <li ng-repeat="photo in people track by photo.id" index="photo.id">
+                        {{photo.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <h4><b>On Tonight</b></h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 wallpapers">
+        <h4><b>Today's Wallpapers</b></h4>
+        <div class="wallpaper-list">
+            <ul style="list-style-type: none">
+                    <li  ng-repeat="wallpaper in wallpapers track by wallpaper.id" index="wallpaper.id">
+                        <img  class="img img-responsive" src="{{wallpaper.image}}">
+                    </li>
+                </div>
+            </ul>
+        </div>    
+    </div>
+</div>
+<div class="recently-viewed">
+    <h4 style="color: #625959"><b>Recently Viewed</b></h4>
+    <div class="view-list">
+        <ul style="list-style-type: none; height: 100px">
+            <li ng-repeat="movie in viewlist track by movie.id" index="movie.id">
+                <img class="img img-responsive" src="{{movie.image_url}}">
+            </li>
+        </ul>
+    </div>    
+</div>

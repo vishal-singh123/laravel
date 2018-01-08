@@ -12,8 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-//Route::get('/hello', 'DashboardController@index');
+// Route::group(['prefix'=>'api/v1', function() {
+// 	Route::get('todos/active', 'TodoController@getAllActiveTodos');
+// 	Route::get('todos/completed', 'TodoController@getAllCompletedTodos');
+// 	Route::resource('todos', 'TodoController');
+// }]);
 
+// Route:get('api/v1/movies/get-all', 'MoviesController@index');
+Route::get('api/v1/movies', 'MoviesController@AllMovies');
+Route::get('api/v1/movies/featured','MoviesController@FeaturedMovies');
+Route::post('api/v1/movies/editMovies','MoviesController@storeMovies');

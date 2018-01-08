@@ -1,0 +1,42 @@
+<div class="movie-description">
+	<div class="movie-image">
+		<div style="background:url(movies/m3.jpg) center center; background-size:cover; height:580px" class="slider-size">
+			<div class="overlay-description" style="height: 580px">
+				<div class="floating-div">
+					<div class="float-image">
+						<img src="movies/m2.jpeg">
+					</div>
+					<div class="desc" style="width: 700px">
+						<font size="7"><b>{{movieDetails.text}}</b></font>
+							<p><font size="3">{{movieDetails.genre}}</font>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-registered fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bookmark-o fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye fa-lg" aria-hidden="true"></i></p>
+
+							<div>
+								<p><span class="rating-desc" uib-rating ng-model="movieDetails.rating" max="5" read-only="true"></span></p>
+							</div>
+							<h4>Ratings: {{movieDetails.rating}}/5 from 112,342 users</h4>
+					</div>
+					<div class="btn play-button">
+						<i class="fa fa-play fa-4x" aria-hidden="true"></i>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="movie-summary">
+		<font size="5">Iron Man is a 2008 American superhero film based on the Marvel Comics character of the same name, produced by Marvel Studios and distributed by Paramount Pictures. It is the first film in the Marvel Cinematic Universe.</font>
+		<div class="credits">
+			<div class="col-sm-6">
+				<font size="5">
+					<p><b>Director :</b>&nbsp;<span style="color: grey">Michael Vaughan</span></p>
+					<p><b>Initial Release :</b>&nbsp;<span style="color: grey">20 September 2017</span></p>
+				</font>
+			</div>
+			<div class="col-sm-6">
+				<font size="5">
+					<p><b>Production Company :</b>&nbsp;<span style="color: grey">Marv Films</span></p>
+					<p><b>Music Director :</b>&nbsp;<span style="color: grey">Henry Jackman, Mathew Margeson</span></p>
+				</font>	
+			</div>
+		</div>
+	</div>
+</div>

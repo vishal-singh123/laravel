@@ -1,0 +1,46 @@
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">Movie Details</h3>
+</div>
+<div class="modal-body" id="modal-body">
+	<form>
+<!-- 		<input type="hidden" name="_token" value="{{ csrf_token() }}"> -->
+		Name:<br>
+  		<input type="text" name="name" ng-model="movie.name">
+  		<br>
+  		Image:<br>
+  		<input type="text" name="image" ng-model="movie.image_url">
+  		<br>
+  		Release Year:<br>
+  		<input type="number" name="release-year" ng-model="movie.release_year">
+  		<br>
+  		Country:<br>
+  		<input type="text" name="country" ng-model="movie.country">
+  		<br>
+  		Trailer:<br>
+  		<input type="text" name="trailer" ng-model="movie.trailer_link">
+  		<br>
+  		Featured:<br>
+  		<input type="text" name="featured" ng-model="movie.featured">
+  		<br>
+  		Rating:<br>
+  		<input type="number" name="rating" ng-model="movie.rating">
+  		<br>
+  		Description:<br>
+  		<input type="text" name="description" ng-model="movie.description">
+  		<br>
+  		Genre:<br>
+  		<input type="text" name="genre" ng-model="movie.genre">
+  		<br>
+  		Duration:<br>
+  		<input type="text" name="duration" ng-model="movie.duration">
+  		<br>
+  		Thumbnail:<br>
+  		<input type="text" name="thumbnail" ng-model="movie.thumbnail">
+  		<br><br>
+  		<input type="button" value="Submit" ng-click="saveForm()">
+	</form>
+</div>
+<div class="modal-footer" id="modal-footer">
+	<button class="btn close-modal" ng-click="close()">Close</button>
+</div>
+	

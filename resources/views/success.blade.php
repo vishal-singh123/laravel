@@ -1,1 +1,1 @@
-User {{$user}} has been generated. Thank you, cheers!
+Welcome to laravel {{$user}}

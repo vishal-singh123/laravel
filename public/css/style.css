@@ -1,0 +1,243 @@
+.scroll-movies{
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+
+.out-now {
+	width: 262px;
+	height:26px;
+	top: 50%;
+	background: blue;
+	text-align: center;
+	display:inline-block;
+	padding:7px 0px;
+	color: white;
+	font-family: Times New Roman;
+	position: absolute;
+	transform-origin: center top;
+	transform: translateX(-50%) rotate(-90deg);
+}
+
+.out-now>h6{
+	margin: 0px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.scroll-parent{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: 305px;
+}
+.scroll-parent>ul{
+	list-style-type: none;
+	white-space: nowrap;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-left: 28px;
+}
+
+.scroll-parent>ul>li{
+	display: inline-block;
+	height: 262px;
+	position: relative;
+	width:180px;
+}
+.overlay{
+	position: absolute;
+/*	z-index: 798;*/
+	background: #00000059;
+	color: #fff;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	align-items: flex-end;
+	padding: 10px;
+}
+.overlay>ul{
+	list-style-type: none;
+}
+.col-md-12{
+	padding: 0;
+}
+.navbar{
+	margin: 0;
+}
+.mouseover{
+	opacity:0;
+}
+.scroll-parent>ul>li:hover .mouseover{
+	opacity:1;
+}
+.scroll-trailers{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 292px;
+	align-items: center;
+}
+.trailers{
+	width: 272px;
+	height: 25px;
+	background: red;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	transform-origin: center top;
+	transform: translate(-50%, 34%) rotate(-90deg);
+	z-index:999;
+}
+.scroll-infotrailers{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: 300px;
+	width: 100%;
+	margin: auto;
+}
+.scroll-infotrailers>ul{
+	list-style-type: none;
+	white-space: nowrap;
+}
+.scroll-infotrailers>ul>li{
+	display: inline-block;
+	width: 901px;
+	height: 290px;
+	margin: 5px;
+}
+.description{
+	display: block;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-top: 10px;
+	white-space: normal;
+}
+.trailer-link{
+	padding-right: 0px;
+}
+.movie-logo{
+	height: 100%;
+	width: 100%;
+	padding-top: 20px;
+	padding-right: 40px;
+	margin-left: 40px;	
+}
+.dynamic-info{
+	height: 330px;
+}
+.wrap-nav .nav{
+	position: absolute;
+	left: 220px;
+	top: 0;
+	width: 355px;
+	padding-top: 20px;
+}
+.news{
+	padding-top: 20px;
+}
+.born-today{
+	padding-top: 20px;
+}
+.wallpapers{
+	padding-top: 20px;
+}
+.wallpaper-list>ul>li{
+	height: 80px;
+	width: 290px;
+	padding-top: 5px;
+	display: inline-block;
+	overflow: hidden;
+}
+.movie-image{
+	height: 580px;
+}
+.floating-div{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	flex-direction: row;
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 14%);
+	bottom: 30%;
+}
+.overlay-description{
+	background: #00000091;
+	color: #fff;
+}
+.desc{
+	flex-wrap: wrap;
+	align-content: flex-start;
+	transform: translate(-20%, 36%);
+}
+.rating-desc{
+	font-size: 50px;
+}
+.float-image{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.72), 0 6px 20px 0 rgba(0, 0, 0, 0.73);
+}
+.play-button{
+	transform: translate(-50%, 315%);
+	height: 110px;
+	width: 110px;
+	background: #129ab2;
+	border-radius: 55px;
+}
+.fa-play{
+	color: white;
+	transform: translate(19%, 38%);
+}
+.movie-summary{
+	margin-top: 100px;
+	margin-right: 240px;
+	margin-left: 180px;
+	justify-content: center;
+	height:250px;
+}
+.credits{
+	margin-top: 30px;
+}
+.recently-viewed{
+	padding-left: 30px;
+}
+.play-button:hover {
+background-color: #0d8aa0;
+}
+.trailer-link{
+	position: relative;
+}
+.trailer-overlay{
+	position: absolute;
+	z-index: 999;
+	background: #00000059;
+	color: #fff;
+	display: flex;
+	height: 273px;
+	width: 97%;
+	padding: 0px;
+}
+.trailer-button{
+	height: 60px;
+	width: 60px;
+	background: #129ab2;
+	border-radius: 30px;
+	background: transparent;
+	border:2px solid white;
+	transform: translate(295%, 151%);
+}
+.trailer-button:hover{
+	background-color: #0000008a;
+}
+.edit-button{
+	position: absolute;
+	background-color: #8080804a;
+	transform: translate(13%, 14%);
+	z-index: 999;
+	color: white;
+}
+.edit-button:hover {
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.72), 0 6px 20px 0 rgba(0, 0, 0, 0.73);
+}

@@ -1,0 +1,61 @@
+<div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div ng-controller="featuredMovies">
+                            <div style="height: 384px">
+                                 <div uib-carousel active="active" interval="2000" no-wrap="false">
+                                    <div uib-slide ng-repeat="movie in movies track by movie.id" index="movie.id"> 
+                                        <div style="background:url({{movie.image}}) center center; background-size:cover; height:384px" class="slider-size"></div>
+                                        <div class="carousel-caption">
+                                            <h1>{{movie.text}}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="scroll-movies">
+                <div class="out-now" style="float:left">
+                    <h6>OUT NOW</h6>
+                </div>
+                <div class="scroll-parent" ng-controller="ratingCtrl">
+                    <ul>
+                        <li>
+                            <div class="overlay">
+                                <span uib-rating ng-model="rate" max="10" read-only="true">
+                                Baby Driver
+                            </div>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">  
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                        <li>
+                            <img src="movies/baby_driver.jpg">
+                        </li>
+                    </ul> 
+                </div>

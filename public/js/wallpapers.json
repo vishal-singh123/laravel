@@ -1,0 +1,17 @@
+[	
+	{
+		"name": "w2",
+		"id": "1",
+		"image": "movies/Avengers_Infiinity_War.jpg"
+	},
+	{
+		"name": "w3",
+		"id": "2",
+		"image": "movies/iron_man.jpg"
+	},
+	{
+		"name": "w4",
+		"id": "3",
+		"image": "movies/Justice_League.jpg"
+	}
+]
